@@ -1,0 +1,16 @@
+<h1>Emend Place</h1>
+
+<h1><%= place.name %> </h1>
+
+<form class="emend-form" action="/places/<%= place.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name="name" placeholder="<%= place.name %> ">
+    <input type="text" name="image_url" placeholder="<%= place.image_url %> ">
+    <input type="text" name="country" placeholder="<%= place.country %> ">
+    <input type="text" name="typeofplace" placeholder="<%= place.typeofplace %> ">
+    <input type="text" name="season" placeholder="<%= place.season %> ">
+    <input type="text" name="thingstodo" placeholder="<% place.thingstodo %> ">
+    <input type="text" name="recomendation" placeholder="<%= place.recomendation %> ">
+    <input type="hidden" name="user_id">
+    <button class="emend-btn">Emend</button>
+</form>

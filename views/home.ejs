@@ -1,0 +1,20 @@
+
+
+
+    
+
+    <div class="polaroid ">
+        <% places.forEach(place => {%>
+        <a href="/places/<%= place.id %> " title="<%= place.name %>">
+            <img height="250" src="<%= place.image_url  %> " alt="<%= place.name %>" title="<%= place.name %>">
+        </a>
+
+
+            
+            
+        <% }) %>  
+    </div>
+    
+ 
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/lambda');
+    </style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="left-section">
+        <div class="left-icon">
+            <h1>Jom Chill</h1>
+            
+            <img class="profile-pic" src="https://i.pinimg.com/736x/28/3a/b1/283ab1108ef8e379a2e555de019e1aee.jpg" alt="">
+            <% if(isLoggedIn) { %> 
+                <h3><%= currentUser.email %></h3>
+                <% } %> 
+                
+            </div>
+            <div class="left-followers">
+                <div class="posts">
+                    <h5>29</h5><h6>Posts</h6>
+                </div>
+                <div class="followers">
+                    <h5>28k</h5><h6>Followers</h6>
+                </div>
+                <div class="following">
+                    <h5>285</h5><h6>Following</h6>
+                </div>
+            </div>
+            <div class="left-detail">
+                <a class="home-icon" href="/"><i class="fa fa-home" style="font-size:20px"> Home</i></a>
+                <a href=""><i class="fa fa-search" aria-hidden="true" style="font-size:20px;"> Explore</i></a>
+                <a href="/share_form"><i class="fa fa-plus-square" aria-hidden="true" style="font-size:20px;"> Share</i></a>           
+            </div>
+            <footer class="left-footer">
+                <% if (isLoggedIn) {%>
+                    
+                    
+                    <form action="/logout" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <button>logout</button>
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </form>
+                    
+                    <% } else { %> 
+                        <a href="/login">
+                            <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 20px;"> Sign in</i>
+                        </a>
+                        
+                        
+                        
+       <% } %>      
+       
+    </footer>
+    
+</section>
+<section class="right-section">
+    <%- body %> 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

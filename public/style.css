@@ -1,0 +1,172 @@
+body{
+    /* background-color: #00203FFF; */
+    /* margin: 0; */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* LAYOUT */
+h1,p,h5,h6{
+  color: #ADEFD1FF;
+  
+  font-family: 'Lambda', sans-serif;
+}
+.profile-pic{
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+}
+.left-icon{
+  text-align: center;
+  
+}
+.left-followers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.left-detail,
+.left-footer{
+  display: grid;
+  justify-content: center;
+  line-height: 2;
+  
+}
+.left-footer{
+  border-top: 1px solid black
+}
+.posts, .followers, .following{
+  text-align: center;
+  line-height: 40%;
+  color: antiquewhite ;
+}
+
+.left-section, .right-section{
+  border: 1px solid black;
+}
+.left-section{
+  background-color: #085c67;
+  border-radius: 8px 0 0 8px;
+  padding-right: 10px;
+
+}
+
+/* .left-footer{
+  text-align: center;
+} */
+.right-section{
+  background-color: #00203FFF;
+  border-radius: 8px 8px 8px 8px;
+  margin-left: -10px
+}
+
+/* PLACE DISC */
+img{
+  width: 300px;
+  height: 300px;
+}
+
+.top-section{
+  
+  vertical-align: middle;
+  border: 1px solid #ADEFD1FF;
+  background-color: #ADEFD1FF;
+  /* padding-bottom: 20px; */
+  height: 40px;
+  
+}
+.home-icon,
+.fa-search, 
+.fa-sign-in,
+.fa-plus-square{
+  color: #ADEFD1FF;
+}
+.placeDis-section{
+  margin-left:300px;
+  width: 300px;
+}
+
+.image-post{
+  border-radius: 50px;
+}
+input{
+  border-radius: 20px;
+}
+
+/* HOME PAGE */
+/* .polaroid{
+  display: flex;
+} */
+.polaroid a {
+    background: #ffffff;
+    display: inline-block;
+    margin: 55px 75px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    z-index: 0;
+    position: relative;
+  }
+  
+  .polaroid a:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+  }
+  
+  .polaroid img {
+    display: block;
+    width: 250px;
+  }
+  
+  .polaroid a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
+
+  /* RETRIEVE */
+  .upload-form{
+    display: grid;
+  }
+
+  /* EMEND FORM */
+
+  .emend-form, .retrieve-form{
+    display: grid;
+  }
+
+  .emend-btn, .upload-btn {
+    background: #79a6a3;
+    color: #ADEFD1FF;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: Josefin Slab;
+    font-size: 28px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 0px 33px;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+  }
+  
+  .emend-btn:hover{
+      background: #2196f3;
+      color:#00203FFF;
+      box-shadow:0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+      /* transition-delay: 1s; */
+  }
