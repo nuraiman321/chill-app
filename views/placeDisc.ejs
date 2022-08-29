@@ -1,4 +1,6 @@
-<h1>placeDisc</h1>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<h1 class="h1">Place Detail</h1>
 <section class="discrip" style="text-align: center">
     
     <section class="placeDis-section">
@@ -7,15 +9,16 @@
         </div>
     
         <div class="">
+            <p>Posted by @<%= username %> </p>
             <img class="image-post" src="<%= place.image_url %> " alt="">
     
         </div>
-        <div class="LCS" style="text-align:left">
+        <!-- <div class="LCS" style="text-align:left">
             <i class="fa fa-thumbs-up" aria-hidden="true" style="color:#ADEFD1FF"></i>
-            <!-- <i class="fa fa-thumbs-down" aria-hidden="true" style="color:#ADEFD1FF"></i> -->
+            <i class="fa fa-thumbs-down" aria-hidden="true" style="color:#ADEFD1FF"></i>
             <i class="fa fa-paper-plane" aria-hidden="true" style="color:#ADEFD1FF"></i>
             <i class="fa fa-comment" aria-hidden="true" style="color:#ADEFD1FF"></i>
-        </div>
+        </div> -->
         <div class="desc">
             <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= place.name %>, <%= place.country %> </p>
             <p> <%= place.typeofplace %> </p>
@@ -27,15 +30,17 @@
     </section>
 </section>
 
-    <footer class="placeDisc_footer">
-        <a href="/places/<%= place.id%>/emend"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#ADEFD1FF"> Edit</i> </a>
-        <a href=""><i class="fa fa-plus-square" aria-hidden="true" > Share</i></a>
+<footer class="placeDisc_footer">
+<% if(currentUser.id === place.user_id){ %>
+    <a href="/places/<%= place.id%>/emend"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#ADEFD1FF"> Edit</i> </a>
+    <!-- <a href=""><i class="fa fa-plus-square" aria-hidden="true" > Share</i></a> -->
     
     <form action="/delete/<%= place.id %>" method="post">
         <input type="hidden" name="id" value="<%= place.id %> ">
-        <button>DELETE</button>
+        <button class="delete-btn"><i class="fa fa-trash"> Delete Post</i></button>
     </form>
-        
+    
+<% } %>  
 
     </footer>
   

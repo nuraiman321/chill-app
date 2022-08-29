@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jom Chill</title>
     <style>
         @import url('http://fonts.cdnfonts.com/css/lambda');
     </style>
@@ -14,24 +14,27 @@
 <body>
     <section class="left-section">
         <div class="left-icon">
-            <h1>Jom Chill</h1>
+            <h1 class="h1">Jom Chill</h1>
             
-            <img class="profile-pic" src="https://i.pinimg.com/736x/28/3a/b1/283ab1108ef8e379a2e555de019e1aee.jpg" alt="">
+        </div>
             <% if(isLoggedIn) { %> 
-                <h3><%= currentUser.email %></h3>
-                <% } %> 
+                <div class="profileDetail">
+                    <img class="profile-pic" src=<%= currentUser.profile %>  alt="">
+                    <h4 class="username">@<%= currentUser.username %></h4>
+
+                </div>
                 
-            </div>
             <div class="left-followers">
                 <div class="posts">
-                    <h5>29</h5><h6>Posts</h6>
+                    <h5 class="h5"><%= postLength %> </h5 class="h5"><h6 class="h6">Posts</h6 class="h6">
                 </div>
                 <div class="followers">
-                    <h5>28k</h5><h6>Followers</h6>
+                    <h5 class="h5">28k</h5 class="h5"><h6 class="h6">Followers</h6 class="h6">
                 </div>
                 <div class="following">
-                    <h5>285</h5><h6>Following</h6>
+                    <h5 class="h5">285</h5 class="h5"><h6 class="h6">Following</h6 class="h6">
                 </div>
+                <% } %> 
             </div>
             <div class="left-detail">
                 <a class="home-icon" href="/"><i class="fa fa-home" style="font-size:20px"> Home</i></a>
@@ -44,14 +47,15 @@
                     
                     <form action="/logout" method="post">
                         <input type="hidden" name="_method" value="delete">
-                        <button>logout</button>
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <button class="logout-btn"><i class="fa fa-sign-out" aria-hidden="true">logout </i></button>
+                        
                     </form>
                     
                     <% } else { %> 
                         <a href="/login">
                             <i class="fa fa-sign-in" aria-hidden="true" style="font-size: 20px;"> Sign in</i>
                         </a>
+                        <button class="signup-btn" style="font-size:15px"><a href="/signup"> <i class="fa fa-address-card"> Signup</i></a></button>
                         
                         
                         

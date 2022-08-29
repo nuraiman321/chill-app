@@ -7,8 +7,11 @@ const db = new Client ({
     password:'easypassword'
 })
 
-const email = 'him@gmail.com'
-const myPlaintextPassword = 'chill'
+// const email = 'him@gmail.com'
+// const myPlaintextPassword = 'pudding'
+
+const email = 'her@gmail.com'
+const myPlaintextPassword = 'pudding'
 
 bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(myPlaintextPassword, salt, (err, passwordDigest) => {

@@ -1,49 +1,72 @@
-body{
-    /* background-color: #00203FFF; */
-    /* margin: 0; */
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+@import url('http://fonts.cdnfonts.com/css/lambda');
+
+
+body {
+  /* background-color: #00203FFF; */
+  /* margin: 0; */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 /* LAYOUT */
-h1,p,h5,h6{
+
+p,
+.h1, 
+.username,
+.h5,
+.h6,
+h1, h5, h6{
   color: #ADEFD1FF;
-  
   font-family: 'Lambda', sans-serif;
+
 }
-.profile-pic{
+
+.profileDetail {
+  text-align: center;
+}
+
+.profile-pic {
   border-radius: 100px;
   width: 70px;
   height: 70px;
 }
-.left-icon{
+
+.left-icon {
   text-align: center;
-  
+
 }
-.left-followers{
+
+.left-followers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .left-detail,
-.left-footer{
+.left-footer {
   display: grid;
   justify-content: center;
   line-height: 2;
-  
-}
-.left-footer{
-  border-top: 1px solid black
-}
-.posts, .followers, .following{
-  text-align: center;
-  line-height: 40%;
-  color: antiquewhite ;
+
 }
 
-.left-section, .right-section{
+.left-footer {
+  border-top: 1px solid black
+}
+
+.posts,
+.followers,
+.following {
+  text-align: center;
+  line-height: 40%;
+  color: antiquewhite;
+}
+
+.left-section,
+.right-section {
   border: 1px solid black;
 }
-.left-section{
+
+.left-section {
   background-color: #085c67;
   border-radius: 8px 0 0 8px;
   padding-right: 10px;
@@ -53,42 +76,76 @@ h1,p,h5,h6{
 /* .left-footer{
   text-align: center;
 } */
-.right-section{
+.right-section {
   background-color: #00203FFF;
   border-radius: 8px 8px 8px 8px;
   margin-left: -10px
 }
 
 /* PLACE DISC */
-img{
+img {
   width: 300px;
   height: 300px;
 }
 
-.top-section{
-  
+.top-section {
+
   vertical-align: middle;
   border: 1px solid #ADEFD1FF;
   background-color: #ADEFD1FF;
   /* padding-bottom: 20px; */
   height: 40px;
-  
+
 }
+
 .home-icon,
-.fa-search, 
+.fa-search,
 .fa-sign-in,
-.fa-plus-square{
+.fa-plus-square {
   color: #ADEFD1FF;
 }
-.placeDis-section{
-  margin-left:300px;
+
+.fa-trash {
+  color: black;
+  font-size: 15px;
+}
+
+.logout-btn, .signup-btn {
+  margin-top: 5px;
+  border: 1px solid #ADEFD1FF;
+  border-radius: 15px;
+  color: black;
+  background-color: #ADEFD1FF;
+
+}
+
+.delete-btn{
+  font-size: 15px;
+  background-color: red;
+  color: black;
+  border-radius: 15px;
+}
+
+a{
+  color: black;
+}
+
+.logout-btn :hover {
+  font-size: 150%
+}
+
+
+
+.placeDis-section {
+  margin-left: 300px;
   width: 300px;
 }
 
-.image-post{
+.image-post {
   border-radius: 50px;
 }
-input{
+
+input {
   border-radius: 20px;
 }
 
@@ -97,76 +154,97 @@ input{
   display: flex;
 } */
 .polaroid a {
-    background: #ffffff;
-    display: inline-block;
-    margin: 55px 75px 30px;
-    padding: 15px 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    -webkit-transition: all .20s linear;
-    -moz-transition: all .20s linear;
-    transition: all .20s linear;
-    z-index: 0;
-    position: relative;
-  }
-  
-  .polaroid a:after {
-    color: #333;
-    font-size: 25px;
-    content: attr(title);
-    position: relative;
-    top: 15px;
-  }
-  
-  .polaroid img {
-    display: block;
-    width: 250px;
-  }
-  
-  .polaroid a:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    z-index: 10;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  }
+  background: #ffffff;
+  display: inline-block;
+  margin: 55px 75px 30px;
+  padding: 15px 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 0;
+  position: relative;
+}
 
-  /* RETRIEVE */
-  .upload-form{
-    display: grid;
-  }
+.polaroid a:after {
+  color: #333;
+  font-size: 25px;
+  content: attr(title);
+  position: relative;
+  top: 15px;
+}
 
-  /* EMEND FORM */
+.polaroid img {
+  display: block;
+  width: 250px;
+}
 
-  .emend-form, .retrieve-form{
-    display: grid;
-  }
+.polaroid a:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 10;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+}
 
-  .emend-btn, .upload-btn {
-    background: #79a6a3;
-    color: #ADEFD1FF;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: 0.2s;
-    font-family: Josefin Slab;
-    font-size: 28px;
-    text-align: center;
-    border: 1px solid black;
-    margin: 3px;
-    padding: 0px 33px;
-    border-radius: 10px;
-    box-shadow: 2px 2px black;
-  }
-  
-  .emend-btn:hover{
-      background: #2196f3;
-      color:#00203FFF;
-      box-shadow:0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-      /* transition-delay: 1s; */
-  }
+/* RETRIEVE */
+.upload-form {
+  display: grid;
+}
+
+/* EMEND FORM */
+
+.emend-form,
+.retrieve-form {
+  display: grid;
+}
+
+.emend-btn,
+.upload-btn {
+  background: #79a6a3;
+  color: #ADEFD1FF;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.2s;
+  font-family: Josefin Slab;
+  font-size: 28px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 3px;
+  padding: 0px 33px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+}
+
+.emend-btn:hover {
+  background: #2196f3;
+  color: #00203FFF;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  /* transition-delay: 1s; */
+}
+
+.signup-form {
+  width: 210px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+}
+
+/* .signup-form input{
+    width: 200px;
+  } */
+
+.signup-btn {
+  width: 80px;
+}
+
+.username {
+  color: #ADEFD1FF;
+}
